@@ -1,0 +1,60 @@
+&lt;html>
+
+&lt;head>
+    &lt;meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    &lt;script>
+        function validateForm() {
+            var x = document.Form.Name.value;
+            var y = document.Form.Email.value;
+            var z = document.Form.Pincode.value;
+            if (x == null || x == "") {
+                alert("please Enter your name");
+                document.Form.Name.focus();
+                return false;
+            }
+            if (y == null || y == "") {
+                alert("please enter your Email properly");
+                document.Form.Email.focus();
+                return false;
+            }
+            if (z.length &lt; 6 || z.length > 6 || isNaN(z)) {
+                alert("please enter your pincode properly");
+                document.Form.Pincode.focus();
+                return false;
+            }
+        }
+    &lt;/script>
+    &lt;title>Form&lt;/title>
+    &lt;style type="text/css">
+        h1 {
+            border: thick dotted #010000;
+            background-color: #6633ff;
+        }
+    &lt;/style>
+&lt;/head>
+
+&lt;body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 102);" alink="#000099" link="#000099" vlink="#990099">
+    &lt;form onsubmit="return validateForm()" method="post" action="Form.html" name="Form">&lt;br>
+        &lt;h1>
+            $amp;nbsp;$amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp;
+            $amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp; Registration Form&lt;/h1>
+        &lt;h2>&lt;label>$amp;nbsp;$amp;nbsp;$amp;nbsp;
+$amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp;
+$amp;nbsp;$amp;nbsp;$amp;nbsp; Name $amp;nbsp;&lt;/label>$amp;nbsp;$amp;nbsp;$amp;nbsp; :$amp;nbsp;$amp;nbsp;$amp;nbsp; &lt;input name="Name"> &lt;/h2>
+        &lt;h2>&lt;label>$amp;nbsp;$amp;nbsp;$amp;nbsp;
+$amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp;
+$amp;nbsp;$amp;nbsp;$amp;nbsp; Email&lt;/label>$amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp; :$amp;nbsp;$amp;nbsp;$amp;nbsp; &lt;input name="Email">$amp;nbsp;$amp;nbsp;&lt;/h2>
+        &lt;h2>&lt;label>$amp;nbsp;$amp;nbsp;$amp;nbsp;
+$amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp;
+$amp;nbsp;$amp;nbsp;$amp;nbsp; Pincode&lt;/label>$amp;nbsp; $amp;nbsp;:$amp;nbsp;$amp;nbsp;$amp;nbsp; &lt;input name="Pincode">&lt;br>
+        &lt;/h2>
+        &lt;span style="font-weight: bold;">&lt;br>
+  &lt;/span>$amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp; $amp;nbsp; $amp;nbsp;$amp;nbsp; &lt;input value="Submit" name="Submit" type="submit">$amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp; $amp;nbsp;$amp;nbsp;$amp;nbsp;
+        $amp;nbsp;$amp;nbsp;$amp;nbsp;
+        &lt;input name="Reset" value="Reset" type="reset">$amp;nbsp;$amp;nbsp;$amp;nbsp;
+        &lt;br>
+        &lt;br>
+    &lt;/form>
+&lt;/body>
+
+&lt;/html>

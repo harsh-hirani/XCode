@@ -1,0 +1,147 @@
+.code-toolbar,
+.code-toolbar pre {
+    height: 50vh !important;
+}
+
+.code-toolbar pre {
+    overflow: auto;
+}
+
+.toolbar {
+    transform: translate(-20px, 10px) scale(1.72);
+}
+
+nav {
+    height: 10vh;
+    min-height: 30px;
+    background: #fff;
+    display: grid;
+    grid-template-rows: 5vh 5vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.col1 {
+    grid-column: 1/-1;
+    color: #ffff0a;
+    font-size: 25px;
+    font-weight: bolder;
+    padding: 5px 20px;
+    background-color: #000;
+}
+
+.col2 {
+    background: linear-gradient(120deg, #000 90%, transparent 50%);
+}
+
+.col3 {
+    grid-column: 2/5;
+    background-color: transparent;
+}
+
+.col4 {
+    background: linear-gradient(240deg, #000 90%, transparent 50%);
+    color: #fff;
+    font-size: 35px;
+    font-weight: bolder;
+    padding: 5px 20px;
+}
+
+.col4 div {
+    transform: rotate(90deg);
+    height: 20px;
+    width: 20px;
+    margin-left: 60%;
+}
+
+.threeBar {
+    display: flex;
+    flex-direction: column;
+    height: 5vh;
+    max-width: 43px;
+    border-radius: 9px;
+    margin: 0px auto 3px;
+    z-index: 20;
+}
+
+.threeBar div {
+    height: 5px;
+    width: 40px;
+    border-radius: 9px;
+    max-width: 40px;
+    background: #f1f1f1;
+    margin: 5px auto 3px;
+    transition: all 0.225s ease-in-out;
+    z-index: 20;
+}
+
+.threeBar.active div:nth-child(1) {
+    transform: translate(0px, 11px) rotate(-45deg);
+}
+
+.threeBar.active div:nth-child(2) {
+    opacity: 0;
+    transform: translate(100px);
+}
+
+.threeBar.active div:nth-child(3) {
+    transform: translate(0px, -11px) rotate(45deg);
+}
+
+input {
+    height: 25px;
+    width: 75%;
+    background: #e3e3e3;
+    border: 1px solid #000000;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    margin-top: 8px;
+}
+
+#sideBar {
+    overflow: auto;
+    transition: all 0.3s ease-in-out;
+    height: 0vh;
+    margin-top: 10px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
+/* laptop view*/
+
+@media (min-width: 768px) {
+    nav {
+        width: 60%;
+        margin: 5px auto 5px;
+    }
+    .code-toolbar,
+    .code-toolbar pre {
+        width: 60vw;
+        margin: 5px auto 5px;
+    }
+}
+
+
+/* mobile view */
+
+@media (max-width:768px) {
+    nav {
+        width: 100%;
+    }
+    .code-toolbar,
+    .code-toolbar pre {
+        width: 92vw !important;
+        margin: 5px auto;
+    }
+    .threeBar div {
+        width: 30px;
+    }
+    .col2 {
+        background: linear-gradient(120deg, #000 75%, transparent 50%);
+    }
+    .col4 {
+        background: linear-gradient(240deg, #000 75%, transparent 50%);
+    }
+}
